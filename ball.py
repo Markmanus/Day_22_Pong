@@ -5,13 +5,14 @@ class Ball(Turtle):
     def __init__(self):
         super().__init__()
         self.shape("circle")
-        self.color("white")
+        self.color("red")
         self.penup()
         #self.shapesize(stretch_wid=5, stretch_len=1)
         self.goto(0, 0)
-        self.x_move = 10
-        self.y_move = 10
-        self.move_speed = 0.1
+        self.x_move = 5
+        self.y_move = 5
+        self.move_speed = 0.05
+
 
     #moving the ball
     def move(self):
