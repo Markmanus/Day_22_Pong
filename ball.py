@@ -35,6 +35,7 @@ class Ball(Turtle):
             self.last_bounce_x = current_time  # Update the time of the last x bounce
 
     def reset_position(self):
+        self.clear()
         self.goto(0, 0)
-        self.move_speed = 0.1
+        self.move_speed = 0.05
         self.bounce_x()
