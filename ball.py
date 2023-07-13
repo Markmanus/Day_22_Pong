@@ -1,11 +1,12 @@
 from turtle import Turtle
 
+
 #ball class
 class Ball(Turtle):
     def __init__(self):
         super().__init__()
-        self.shape("circle")
-        self.color("red")
+        self.screen.register_shape("balls.gif")
+        self.shape("balls.gif")
         self.penup()
         #self.shapesize(stretch_wid=5, stretch_len=1)
         self.goto(0, 0)
