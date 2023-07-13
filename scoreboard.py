@@ -3,7 +3,7 @@ from turtle import Turtle
 class Scoreboard(Turtle):
     def __init__(self):
         super().__init__()
-        self.color("white")
+        self.color("black")
         self.penup()
         self.ht()
         self.lscore = 0
@@ -13,9 +13,9 @@ class Scoreboard(Turtle):
     def update_scoreboard(self):
         self.clear()
         self.goto(-100, 200)
-        self.write(self.lscore, align="center", font=("Courier", 80, "normal"))
+        self.write(self.lscore, align="center", font=("Courier", 80, "bold"))
         self.goto(100, 200)
-        self.write(self.rscore, align="center", font=("Courier", 80, "normal"))
+        self.write(self.rscore, align="center", font=("Courier", 80, "bold"))
 
     def lpoint(self):
         self.lscore += 1

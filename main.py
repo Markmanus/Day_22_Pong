@@ -6,6 +6,12 @@ import winsound
 import random
 import time
 import cProfile
+import pygame.mixer
+import threading
+
+pygame.mixer.init()
+pygame.mixer.music.load("lions.mp3")
+
 
 
 screen = Screen()
@@ -13,6 +19,10 @@ screen.setup(width=800, height=600)
 screen.bgpic("bg.gif")
 screen.title("pong")
 screen.tracer(0)
+
+def play_music():
+    pygame.mixer.music.play()
+
 
 
 def main():
@@ -22,6 +32,8 @@ def main():
     screen.title("pong")
     screen.tracer(0)
 
+    music_thread = threading.Thread(target=play_music)
+    music_thread.start()
     # creating the paddle
     rpaddle = Paddle((300, 0), "right_paddle.gif")
     lpaddle = Paddle((-300, 0), "left_paddle.gif")
